@@ -18,11 +18,6 @@ pipeline {
             }
         }
 
-        stage('Whitesource Scan') {
-            steps {
-            }
-        }
-
         stage('Fortify Scan') {
             steps {
                 // Example Fortify scan step
