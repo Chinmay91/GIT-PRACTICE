@@ -20,6 +20,7 @@ pipeline {
 
         stage('Whitesource Scan') {
             steps {
+                bwhitesource
                 // Example Whitesource scan step
                 sh 'whitesource run'
             }
@@ -28,6 +29,7 @@ pipeline {
         stage('Fortify Scan') {
             steps {
                 // Example Fortify scan step
+                bfortify
                 sh 'sourceanalyzer -b myapp -clean'
                 sh 'sourceanalyzer -b myapp src'
                 sh 'sourceanalyzer -b myapp -scan -f result.fpr'
