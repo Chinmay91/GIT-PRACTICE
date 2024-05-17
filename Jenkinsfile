@@ -20,9 +20,6 @@ pipeline {
 
         stage('Whitesource Scan') {
             steps {
-                bwhitesource
-                // Example Whitesource scan step
-                sh 'whitesource run'
             }
         }
 
